@@ -23,11 +23,11 @@ export const signup = async (req, res, next) => {
 	let existingUser;
 
 	try {
-		exisitingUser = await User.findOne({
+		existingUser = await User.findOne({
 			email
 		})
 	} catch(err) {
-		console.log(err);
+		return console.log(err);
 	}
 	if(existingUser) {
 		return res.status(400).json({ 
