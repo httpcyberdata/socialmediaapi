@@ -1,5 +1,7 @@
 import mongoose from 'mongoose';
 
+const Schema = mongoose.Schema;
+
 const blogSchema = new Schema({
 	title: {
 		type: String,
@@ -20,4 +22,3 @@ const blogSchema = new Schema({
 });
 
 export default mongoose.model("Blog", blogSchema);
-

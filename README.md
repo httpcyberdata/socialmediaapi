@@ -11,14 +11,25 @@ ___________
 ![](backend/images/postmanerror.png)
 ![](backend/images/withoutexpressmiddleware.png)
 1. Cannot destructure property 'name' of 'req.body' as it is undefined.
-	The problem was the server didn't know what data is what receiving from the node js module
-
-2.
+	The problem was the server didn't know what data is what receiving from the node js module. Solution: Add express.json() middleware after initializing the express application.
 
 ### How to use
+1. clone / download
+2. cd into backend
+3. npm install 
+4. npm start.
+5. Use Postman since It's a JSON and HTTP-based application to 
+	For routes:
+		User-based routes:
+			POST /api/user/signup
+			POST /api/user/login
+			GET /api/user
+		Blog based routes:
+
 
 
 ### Photos of project:
+![NPM start & Postman](images/npmstartpostman.gif)
 
 ### Apps used:
 
