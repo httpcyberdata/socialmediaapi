@@ -8,14 +8,15 @@ ___________
 ### Software versions
 
 ### Problems in the project:
-![](images/postmanerror.png)
-![](images/withoutexpressmiddleware.png)
+![](backend/images/postmanerror.png)
+![](backend/images/withoutexpressmiddleware.png)
 1. Cannot destructure property 'name' of 'req.body' as it is undefined.
 	The problem was the server didn't know what data is what receiving from the node js module
 
 2.
 
 ### How to use
+
 
 ### Photos of project:
 
