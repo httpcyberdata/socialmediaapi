@@ -16,3 +16,21 @@ export const getAllBlogs = async(req, res, next) => {
 		blogs
 	})
 }
+
+export const addBlog = async (req, res, next) => {
+	const { title, description, image, user } = req.body;
+	const blog = new Blog({
+		title,
+		description,
+		image,
+		user
+	})
+	try {
+		await blog.save();
+	} catch(err) {
+		return console.log(err);
+	}
+	return res.status(200).json({
+		blog
+	})
+}
