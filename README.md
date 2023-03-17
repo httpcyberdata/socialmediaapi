@@ -22,9 +22,24 @@ ___________
 	For routes:
 		User-based routes:
 			POST /api/user/signup
+				- Creates a user
 			POST /api/user/login
+				- Logs in to a user account
+				- Requires same password as signup
 			GET /api/user
+			 	- Returns an Array of user accounts.
 		Blog based routes:
+			GET /api/blog
+				- Returns all blogs
+			POST /api/blog/add
+				- Creates a new blog
+				4 required fields which are all strings:
+					title,
+					description,
+					image and user
+			PUT /api/blog/update/:id
+				- Updates a blog
+				Requires the mongoDB id of the blog object
 
 
 
