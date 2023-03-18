@@ -44,7 +44,7 @@ ___________
 
 
 ### Photos of project:
-![NPM start & Postman](images/npmstartpostman.gif)
+![NPM start & Postman](backend/images/npmstartpostman.gif)
 
 ### Apps used:
 
@@ -61,6 +61,17 @@ GitHub CLI: [https://cli.github.com/](https://cli.github.com/)
 MongoDB Compass URL: [https://www.mongodb.com/products/compass](https://www.mongodb.com/products/compass)
 
 ### Coding styles I used:
+Contents of the object on the next line and tabbed.
+```
+	// Correct!
+	if(!blog) {
+		return res.status(404).json({ 
+			message: 'No blog found'
+		})
+	}
+	// Wrong!
+	return res.status(200).json({blog})
+```
 
 ### What I learned
 1. How to use modules in expressJS
