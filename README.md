@@ -1,5 +1,4 @@
 # Build A Social Media Backend REST API With Node.JS
-![]
 Tutorial URL: https://www.youtube.com/watch?v=_ee38nL13mE
 Tutorial description:
 
@@ -12,6 +11,19 @@ ___________
 ![](backend/images/withoutexpressmiddleware.png)
 1. Cannot destructure property 'name' of 'req.body' as it is undefined.
 	The problem was the server didn't know what data is what receiving from the node js module. Solution: Add express.json() middleware after initializing the express application.
+2. Transaction numbers are only allowed on a replica set member or mongos
+	The problem was MongoDB doesn't allow developers to use it's transaction feature on created databases but only replica databases. If so, the developer would receive this error in the terminal: 
+		```
+		MongoServerError: Transaction numbers are only allowed on a replica set member or mongos
+		```
+	Solution: It's not a tedious process to create a replica database. Instead simply add the following code below to end of your connection URL string by concatenation
+	```
+	'replicaSet=rs'
+	```
+	The connection URL.
+	```
+	mongoose.connect('mongodb://localhost:27017/some_database' + 'replicaSet=rs')
+	```
 
 ### How to use
 1. clone / download
